@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import TopNav from "../components/TopNav";
 import Modal from "../components/Modal";
 import { getCurrentUser } from "../lib/auth";
-import { formatUsd, sanitizeAmountInput, parseAmount } from "../lib/format";
+import { formatEur, sanitizeAmountInput, parseAmount } from "../lib/format";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -83,7 +83,7 @@ export default function DashboardPage() {
 
         <div className="balance-card">
           <div className="balance-label">VERFÜGBARES GUTHABEN</div>
-          <div className="balance-amount">{formatUsd(user.balance)}</div>
+          <div className="balance-amount">{formatEur(user.balance)}</div>
           <div className="balance-account">
             Konto: •••• {user.email.slice(0, 4).toUpperCase()} 
           </div>
@@ -186,7 +186,7 @@ export default function DashboardPage() {
                 </div>
                 <div className={`tx-amount ${tx.amount >= 0 ? "pos" : "neg"}`}>
                   {tx.amount >= 0 ? "+" : ""}
-                  {formatUsd(tx.amount)}
+                  {formatEur(tx.amount)}
                 </div>
               </li>
             ))}
