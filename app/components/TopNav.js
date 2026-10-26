@@ -13,17 +13,17 @@ export default function TopNav() {
     router.push("/login");
   }
 
-  const links = [
-    { href: "/dashboard", label: "Overview" },
-    { href: "/settings", label: "Settings" },
+ const links = [
+    { href: "/dashboard", label: "Übersicht" },
+    { href: "/settings", label: "Einstellungen" },
   ];
 
   return (
     <>
       <div className="topbar">
         <div className="logo-row">
-          <div className="logo-mark">MB</div>
-          <div className="logo-text">Meridian Bank</div>
+          <div className="logo-mark">DB</div>
+          <div className="logo-text">Deutsche Bank AG</div>
         </div>
         <div className="topbar-right">
           <nav className="nav-tabs">
@@ -38,7 +38,7 @@ export default function TopNav() {
             ))}
           </nav>
           <button className="logout-btn" onClick={handleLogout}>
-            Sign out
+            Abmelden
           </button>
         </div>
       </div>

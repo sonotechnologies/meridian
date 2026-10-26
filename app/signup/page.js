@@ -96,20 +96,20 @@ export default function SignupPage() {
     <div className="login-wrap">
       <div className="login-card">
         <div className="logo-row">
-          <div className="logo-mark">MB</div>
-          <div className="logo-text">Meridian Bank</div>
+          <div className="logo-mark">DB</div>
+          <div className="logo-text">Deutsche Bank AG</div>
         </div>
-        <p className="subtitle">Create your account</p>
+        <p className="subtitle">Erstellen Sie Ihr Konto</p>
 
         {formError && <div className="banner-error">{formError}</div>}
 
         <form onSubmit={handleSubmit} noValidate>
           <div className="field">
-            <label htmlFor="fullName">Full name</label>
+            <label htmlFor="fullName">Vollständiger Name</label>
             <input
               id="fullName"
               type="text"
-              placeholder="Jane Doe"
+              placeholder="Max Mustermann"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               onBlur={() => setTouched((t) => ({ ...t, fullName: true }))}
@@ -120,7 +120,7 @@ export default function SignupPage() {
           </div>
 
           <div className="field">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">E-Mail-Adresse</label>
             <input
               id="email"
               type="email"
@@ -135,7 +135,7 @@ export default function SignupPage() {
           </div>
 
           <div className="field">
-            <label htmlFor="phone">Phone number</label>
+            <label htmlFor="phone">Telefonnummer</label>
             <input
               id="phone"
               type="tel"
@@ -150,7 +150,7 @@ export default function SignupPage() {
           </div>
 
           <div className="field">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Passwort</label>
             <input
               id="password"
               type="password"
@@ -179,7 +179,7 @@ export default function SignupPage() {
           </div>
 
           <div className="field">
-            <label htmlFor="confirmPassword">Confirm password</label>
+            <label htmlFor="confirmPassword">Passwort bestätigen</label>
             <input
               id="confirmPassword"
               type="password"
@@ -205,8 +205,7 @@ export default function SignupPage() {
               }}
             />
             <span>
-              I understand this is a bank application, that
-              banking services are provided.
+              Ich verstehe, dass es sich um eine Bankanwendung handelt und dass Bankdienstleistungen angeboten werden.
             </span>
           </label>
           {errors.agreed && <div className="field-error">{errors.agreed}</div>}
@@ -215,22 +214,17 @@ export default function SignupPage() {
             {loading ? (
               <>
                 <span className="spinner" />
-                Creating account…
+                Konto wird erstellt…
               </>
             ) : (
-              "Create account"
+              "Konto erstellen"
             )}
           </button>
         </form>
 
         <div className="switch-link">
-          Already have an account? <Link href="/login">Sign in</Link>
+          Sie haben bereits ein Konto? <Link href="/login">Anmelden</Link>
         </div>
-
-        <p className="hint">
-          Stored only in your browser's local storage — nothing is sent to a
-          server.
-        </p>
       </div>
     </div>
   );

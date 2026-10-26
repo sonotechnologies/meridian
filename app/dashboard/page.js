@@ -32,16 +32,16 @@ export default function DashboardPage() {
   const amountValue = parseAmount(amount);
 
   const errors = {
-    recipient: touched.recipient && !recipient.trim() ? "Recipient name is required." : "",
+    recipient: touched.recipient && !recipient.trim() ? "Der Name des Empfängers ist erforderlich." : "",
     account:
       touched.account && account.replace(/\D/g, "").length < 6
-        ? "Enter a valid account number (at least 6 digits)."
+        ? "Geben Sie eine gültige Kontonummer ein (mindestens 6 Ziffern)."
         : "",
     amount:
       touched.amount && (!amountValue || amountValue <= 0)
-        ? "Enter an amount greater than $0.00."
+        ? "Geben Sie einen Betrag größer als 0,00 $ ein."
         : touched.amount && amountValue > user.balance
-        ? "Amount exceeds your available balance."
+        ? "Der Betrag übersteigt Ihr verfügbares Guthaben."
         : "",
   };
 
@@ -78,25 +78,25 @@ export default function DashboardPage() {
       <TopNav />
 
       <div className="dash-content">
-        <div className="greeting">Welcome back, {user.fullName} 👋</div>
-        <div className="greeting-sub">Here's your account overview</div>
+        <div className="greeting">Willkommen zurück, {user.fullName} 👋</div>
+        <div className="greeting-sub">Hier ist eine Übersicht Ihres Kontos</div>
 
         <div className="balance-card">
-          <div className="balance-label">AVAILABLE BALANCE</div>
+          <div className="balance-label">VERFÜGBARES GUTHABEN</div>
           <div className="balance-amount">{formatUsd(user.balance)}</div>
           <div className="balance-account">
-            Account: •••• {user.email.slice(0, 4).toUpperCase()} 
+            Konto: •••• {user.email.slice(0, 4).toUpperCase()} 
           </div>
         </div>
 
         <div className="actions-row">
           <div className="action-btn">
             <span className="action-icon">📤</span>
-            Transfer
+            Überweisen
           </div>
           <div className="action-btn">
             <span className="action-icon">📄</span>
-            Statements
+            Kontoauszüge
           </div>
           <div
             className="action-btn"
@@ -105,20 +105,19 @@ export default function DashboardPage() {
             tabIndex={0}
           >
             <span className="action-icon">⚙️</span>
-            Settings
+            Einstellungen
           </div>
         </div>
 
         <div className="panel">
-          <h2>Make a transfer</h2>
-          <p className="panel-sub">Simulated transfer — no real funds move.</p>
+          <h2>Überweisung tätigen</h2>
           <form onSubmit={handleTransfer} noValidate>
             <div className="field">
-              <label htmlFor="recipient">Recipient</label>
+              <label htmlFor="recipient">Empfänger</label>
               <input
                 id="recipient"
                 type="text"
-                placeholder="Recipient name"
+                placeholder="Name des Empfängers"
                 value={recipient}
                 onChange={(e) => setRecipient(e.target.value)}
                 onBlur={() => setTouched((t) => ({ ...t, recipient: true }))}
@@ -128,7 +127,7 @@ export default function DashboardPage() {
             </div>
 
             <div className="field">
-              <label htmlFor="account">Account number</label>
+              <label htmlFor="account">Kontonummer</label>
               <input
                 id="account"
                 type="text"
@@ -143,7 +142,7 @@ export default function DashboardPage() {
             </div>
 
             <div className="field">
-              <label htmlFor="amount">Amount</label>
+              <label htmlFor="amount">Betrag</label>
               <input
                 id="amount"
                 type="text"
@@ -164,17 +163,17 @@ export default function DashboardPage() {
               {submitting ? (
                 <>
                   <span className="spinner" />
-                  Processing…
+                  Wird verarbeitet…
                 </>
               ) : (
-                "Send"
+                "Senden"
               )}
             </button>
           </form>
         </div>
 
         <div className="panel">
-          <h2>Recent transactions</h2>
+          <h2>Letzte Transaktionen</h2>
           <ul className="tx-list">
             {user.transactions.map((tx) => (
               <li className="tx-item" key={tx.id}>
@@ -199,11 +198,11 @@ export default function DashboardPage() {
         <Modal
           icon="⚠"
           iconType="error"
-          title="Transfer not completed"
+          title="Überweisung nicht abgeschlossen"
           onClose={closeFailModal}
           closeLabel="Okay"
         >
-          This transfer could not be processed: Kindly Refer to the admin of the site for restrictions to be lifted.
+          Diese Überweisung konnte nicht verarbeitet werden. Bitte wenden Sie sich an den Administrator der Website, damit die Einschränkungen aufgehoben werden können.
         </Modal>
       )}
     </div>

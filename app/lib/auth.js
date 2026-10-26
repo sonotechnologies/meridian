@@ -45,13 +45,13 @@ export async function signUp({ fullName, email, phone, password }) {
     email: key,
     phone: phone.trim(),
     passwordHash,
-    balance: 300000,
+    balance: 30000,
     transactions: [
       {
         id: 1,
         name: "Opening balance",
         date: new Date().toLocaleDateString("en-US"),
-        amount: 300000,
+        amount: 30000,
         icon: "🏦",
       }
     ],

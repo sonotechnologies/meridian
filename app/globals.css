@@ -39,7 +39,7 @@ demo-banner {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #0d3b34 0%, #145e52 100%);
+  background: linear-gradient(160deg, #0e1a2b 0%, #16294a 100%);
   padding: 20px;
 }
 
@@ -70,7 +70,7 @@ demo-banner {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: #0d3b34;
+  background: #16294a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@ demo-banner {
 .logo-text {
   font-size: 20px;
   font-weight: 800;
-  color: #0d3b34;
+  color: #16294a;
 }
 
 .subtitle {
@@ -180,7 +180,7 @@ demo-banner {
 .btn-primary {
   width: 100%;
   padding: 13px;
-  background: #0d3b34;
+  background: #16294a;
   color: white;
   border: none;
   border-radius: 9px;
@@ -191,7 +191,7 @@ demo-banner {
 }
 
 .btn-primary:hover {
-  background: #145e52;
+  background: #1f3a63;
 }
 
 .btn-primary:active {
@@ -238,7 +238,7 @@ demo-banner {
 .switch-link a {
   background: none;
   border: none;
-  color: #0d3b34;
+  color: #16294a;
   font-weight: 700;
   cursor: pointer;
   font-size: 13.5px;
@@ -271,7 +271,7 @@ demo-banner {
 }
 
 .topbar {
-  background: #0d3b34;
+  background: #16294a;
   color: white;
   padding: 14px 20px;
   display: flex;
@@ -289,7 +289,7 @@ demo-banner {
 
 .topbar .logo-mark {
   background: #ffb648;
-  color: #0d3b34;
+  color: #16294a;
 }
 
 .topbar-right {
@@ -389,7 +389,7 @@ demo-banner {
 .greeting {
   font-size: 21px;
   font-weight: 700;
-  color: #0d3b34;
+  color: #16294a;
   margin-bottom: 4px;
 }
 
@@ -400,7 +400,7 @@ demo-banner {
 }
 
 .balance-card {
-  background: linear-gradient(135deg, #0d3b34 0%, #145e52 100%);
+  background: linear-gradient(160deg, #0e1a2b 0%, #16294a 100%);
   color: white;
   border-radius: 16px;
   padding: 28px;
@@ -494,7 +494,7 @@ demo-banner {
 
 .panel h2 {
   font-size: 16px;
-  color: #0d3b34;
+  color: #16294a;
   margin-bottom: 16px;
 }
 
@@ -604,7 +604,7 @@ demo-banner {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #0d3b34;
+  background: #16294a;
   color: #ffb648;
   display: flex;
   align-items: center;

@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Meridian Bank ",
-  description: "Meridian bank",
+  title: "Deutsche Bank ",
+  description: "Deutsche Bank",
 };
 
 export default function RootLayout({ children }) {

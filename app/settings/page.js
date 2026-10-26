@@ -136,11 +136,11 @@ export default function SettingsPage() {
             <div className="profile-header-email">{user.email}</div>
           </div>
         </div>
-        <div className="greeting-sub">Manage your profile and security settings</div>
+        <div className="greetizng-sub">Verwalten Sie Ihr Profil und Ihre Sicherheitseinstellungen</div>
 
         <div className="panel">
-          <h2>Profile information</h2>
-          <p className="panel-sub">Update your personal details.</p>
+          <h2>Profilinformationen</h2>
+          <p className="panel-sub">Aktualisieren Sie Ihre persönlichen Daten.</p>
 
           {profileMsg && (
             <div className={profileMsg.type === "ok" ? "banner-success" : "banner-error"}>
@@ -150,7 +150,7 @@ export default function SettingsPage() {
 
           <form onSubmit={handleProfileSubmit} noValidate>
             <div className="field">
-              <label htmlFor="fullName">Full name</label>
+              <label htmlFor="fullName">Vollständiger Name</label>
               <input
                 id="fullName"
                 type="text"
@@ -165,15 +165,15 @@ export default function SettingsPage() {
             </div>
 
             <div className="field">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">E-Mail-Adresse</label>
               <input id="email" type="email" value={email} disabled />
               <div className="field-hint">
-                Email is used as your account ID in this demo and can't be changed here.
+                Ihre E-Mail-Adresse dient in dieser Demo als Konto-ID und kann hier nicht geändert werden.
               </div>
             </div>
 
             <div className="field">
-              <label htmlFor="phone">Phone number</label>
+              <label htmlFor="phone">Telefonnummer</label>
               <input
                 id="phone"
                 type="tel"
@@ -191,18 +191,18 @@ export default function SettingsPage() {
               {savingProfile ? (
                 <>
                   <span className="spinner" />
-                  Saving…
+                  Wird gespeichert…
                 </>
               ) : (
-                "Save changes"
+                "Änderungen speichern"
               )}
             </button>
           </form>
         </div>
 
         <div className="panel">
-          <h2>Change password</h2>
-          <p className="panel-sub">Choose a new password for your account.</p>
+          <h2>Passwort ändern</h2>
+          <p className="panel-sub">Wählen Sie ein neues Passwort für Ihr Konto.</p>
 
           {pwMsg && (
             <div className={pwMsg.type === "ok" ? "banner-success" : "banner-error"}>
@@ -212,7 +212,7 @@ export default function SettingsPage() {
 
           <form onSubmit={handlePasswordSubmit} noValidate>
             <div className="field">
-              <label htmlFor="currentPassword">Current password</label>
+              <label htmlFor="currentPassword">Aktuelles Passwort</label>
               <input
                 id="currentPassword"
                 type="password"
@@ -229,7 +229,7 @@ export default function SettingsPage() {
 
             <div className="field-row">
               <div className="field">
-                <label htmlFor="newPassword">New password</label>
+                <label htmlFor="newPassword">Neues Passwort</label>
                 <input
                   id="newPassword"
                   type="password"
@@ -245,7 +245,7 @@ export default function SettingsPage() {
               </div>
 
               <div className="field">
-                <label htmlFor="confirmNewPassword">Confirm new password</label>
+                <label htmlFor="confirmNewPassword">Neues Passwort bestätigen</label>
                 <input
                   id="confirmNewPassword"
                   type="password"
@@ -265,24 +265,24 @@ export default function SettingsPage() {
               {savingPw ? (
                 <>
                   <span className="spinner" />
-                  Updating…
+                  Wird aktualisiert…
                 </>
               ) : (
-                "Update password"
+                "Passwort aktualisieren"
               )}
             </button>
           </form>
         </div>
 
         <div className="panel">
-          <h2>Account details</h2>
+          <h2>Kontodetails</h2>
           <div className="settings-grid">
             <div className="settings-row">
-              <span className="settings-row-label">Account type</span>
-              <span className="settings-row-value">Demo checking</span>
+              <span className="settings-row-label">Kontotyp</span>
+              <span className="settings-row-value">M</span>
             </div>
             <div className="settings-row">
-              <span className="settings-row-label">Member since</span>
+              <span className="settings-row-label">Mitglied seit</span>
               <span className="settings-row-value">
                 {new Date(user.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -292,7 +292,7 @@ export default function SettingsPage() {
               </span>
             </div>
             <div className="settings-row">
-              <span className="settings-row-label">Currency</span>
+              <span className="settings-row-label">Währung</span>
               <span className="settings-row-value">USD ($)</span>
             </div>
           </div>
