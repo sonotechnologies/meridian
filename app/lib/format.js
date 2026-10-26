@@ -1,10 +1,10 @@
 // Formats a raw numeric string into a display currency string as the
 // user types, and exposes the parsed numeric value.
 
-export function formatUsd(amount) {
-  return amount.toLocaleString("en-US", {
+export function formatEur(amount) {
+  return amount.toLocaleString("en-IE", {
     style: "currency",
-    currency: "USD",
+    currency: "EUR",
     minimumFractionDigits: 2,
   });
 }
